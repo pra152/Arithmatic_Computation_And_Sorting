@@ -26,3 +26,27 @@ do
 	
 done
 echo "${array[@]}"
+
+function sortDescending()
+{ 
+     
+for (( i=0 ; i < ${#array[@]}; i++ )) 
+do
+    for (( j=0 ; j < ${#array[@]}; j++ )) 
+    do
+      if [[ ${array[$j]} -lt  ${array[$i]} ]]
+      then
+        tmp=${array[$i]}
+        numbers[$i]=${array[$j]}
+        numbers[$j]=${tmp}
+      fi
+    done
+done
+
+for n in "${array[@]}"
+do
+    echo "$n"
+done
+
+}
+sortDescending
