@@ -50,3 +50,26 @@ done
 
 }
 sortDescending
+
+function sortAscending()
+{
+
+for (( i=0 ; i < ${#array[@]}; i++ )) 
+do
+    for (( j=0 ; j < ${#array[@]}; j++ )) 
+    do
+      if [[ ${array[$j]} -gt  ${array[$i]} ]]
+      then
+        tmp=${array[$i]}
+        numbers[$i]=${array[$j]}
+        numbers[$j]=${tmp}
+      fi
+    done
+done
+
+for n in "${array[@]}"
+do
+    echo "$n"
+done
+}
+sortAscending
