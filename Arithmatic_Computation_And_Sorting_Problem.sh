@@ -15,7 +15,14 @@ echo "Result:" $result2
 result3=$(($a % $b + $c))
 echo "Result:" $result3
 
-echo arithmaticOpeartion[result]=$result
-echo arithmaticOperation[result1]=$result1
-echo arithmaticOperation[result2]=$result2
-echo arithmaticOpeartion[result3]=$result3
+arithmaticOpeartion[result1]=$result
+arithmaticOperation[result2]=$result1
+arithmaticOperation[result3]=$result2
+arithmaticOpeartion[result4]=$result3
+
+for((i=0; i<=${#arithmaticOperation[@]}; i++))
+do
+	array[i]=${arithmaticOperation[result$((i+1))]}
+	
+done
+echo "${array[@]}"
