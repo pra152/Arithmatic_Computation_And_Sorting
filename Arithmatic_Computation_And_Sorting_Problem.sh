@@ -14,3 +14,8 @@ echo "Result:" $result2
 
 result3=$(($a % $b + $c))
 echo "Result:" $result3
+
+echo arithmaticOpeartion[result]=$result
+echo arithmaticOperation[result1]=$result1
+echo arithmaticOperation[result2]=$result2
+echo arithmaticOpeartion[result3]=$result3
